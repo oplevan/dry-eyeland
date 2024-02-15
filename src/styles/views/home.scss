@@ -1,4 +1,4 @@
-@import "../shared";
+@import '../shared';
 
 .page.home {
   height: 100vh;
@@ -12,6 +12,15 @@
     font: bold 34px Larosa;
     letter-spacing: 9.71px;
     text-align: center;
+  }
+
+  .home-hero-logo {
+    font: 180px/1 hero-new, sans-serif;
+    letter-spacing: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 30px 0;
   }
 
   .dry-eyeland-logo {
