@@ -1,0 +1,193 @@
+[
+  {
+    "title": "Dry Eyeland",
+    "url": "/",
+    "themeColor": "teal",
+    "mapPosition": {
+      "desktop": {
+        "z": 0,
+        "x": 0,
+        "y": 0
+      },
+      "mobile": {
+        "z": 0,
+        "x": 0,
+        "y": 0
+      },
+      "tablet": {
+        "z": 0,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "references": ["Craig JP, Nelson JD, Azar DT, et al. <em>Ocul Surf</em>. 2017;15(4):802-812. "]
+  },
+  {
+    "title": "Ocular Summit",
+    "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "nextUpText": "",
+    "navImage": "DED_DSA_OcularSummit_Wayfinding.png",
+    "url": "/ocular-summit",
+    "themeColor": "gold",
+    "mapPosition": {
+      "desktop": {
+        "z": 65,
+        "x": -10,
+        "y": 0
+      },
+      "mobile": {
+        "z": 73,
+        "x": -25,
+        "y": 2.5
+      },
+      "tablet": {
+        "z": 73,
+        "x": -25,
+        "y": 2.5
+      }
+    },
+    "references": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "footnotes": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    ]
+  },
+  {
+    "title": "Neural Tributaries",
+    "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "nextUpText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "navImage": "DED_DSA_NeuralTributaries_Wayfinding.png",
+    "nextImage": "neural-next.png",
+    "url": "/neural-tributaries",
+    "themeColor": "yellow",
+    "backgroundImage": "./assets/img_IslandHead-fpo_NeuralCaverns.jpg",
+    "mapPosition": {
+      "desktop": {
+        "z": 44,
+        "x": 20,
+        "y": 10
+      },
+      "mobile": {
+        "z": 70,
+        "x": 7,
+        "y": 6
+      },
+      "tablet": {
+        "z": 70,
+        "x": 7,
+        "y": 6
+      }
+    },
+    "references": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "footnotes": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Lorem ipsum dolor sit amet, consectetur."
+    ]
+  },
+  {
+    "title": "Tear Film Shores",
+    "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "nextUpText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "navImage": "DED_DSA_TearFilmShores_Wayfinding.png",
+    "nextImage": "tear-film-next.png",
+    "url": "/tear-film-shores",
+    "themeColor": "teal",
+    "mapPosition": {
+      "desktop": {
+        "z": 70,
+        "x": -28,
+        "y": 2
+      },
+      "mobile": {
+        "z": 80,
+        "x": -39,
+        "y": 0
+      },
+      "tablet": {
+        "z": 80,
+        "x": -40,
+        "y": -5
+      }
+    },
+    "references": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "footnotes": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Lorem ipsum dolor sit amet, consectetur."
+    ]
+  },
+  {
+    "title": "Prevalence Point",
+    "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "nextUpText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "navImage": "DED_DSA_PrevalencePoint_Wayfinding.png",
+    "nextImage": "prevalence-next.png",
+    "url": "/prevalence-point",
+    "themeColor": "gold",
+    "mapPosition": {
+      "desktop": {
+        "z": 76,
+        "x": 35,
+        "y": -18
+      },
+      "mobile": {
+        "z": 70,
+        "x": 35,
+        "y": -5
+      },
+      "tablet": {
+        "z": 70,
+        "x": 35,
+        "y": -12
+      }
+    },
+    "references": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    "footnotes": [
+      "Lorem ipsum dolor sit amet, consectetur.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "Lorem ipsum dolor sit amet, consectetur."
+    ]
+  }
+]

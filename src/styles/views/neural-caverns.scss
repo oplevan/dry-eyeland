@@ -1,0 +1,62 @@
+@import "../shared";
+
+.page.neural {
+  section {
+    &.feature {
+      .image:before {
+        border-color: map-get($colours, "teal");
+      }
+
+      .text {
+        background: map-get($colours, "dark-teal");
+      }
+    }
+
+    &.sign-up {
+      background: map-get($colours, "dark-teal");
+      .button {
+        color: #fff;
+        &:hover {
+          color: map-get($colours, "dark-teal");
+        }
+      }
+    }
+
+    &.text-block {
+      color: map-get($colours, "dark-teal");
+
+      h2:before {
+        background: map-get($colours, "yellow");
+      }
+    }
+
+    &.next-up {
+      color: map-get($colours, "dark-teal");
+
+      .text {
+        border-color: map-get($colours, "yellow");
+
+        .link {
+          @include link(map-get($colours, "dark-teal"));
+        }
+      }
+    }
+  }
+  
+  .classification-block {
+    .icon-text {
+      .image {
+        text-align: center;
+        height: 45px;
+        width: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        margin: 0 0 0 25px;
+      }
+    }
+  }
+}

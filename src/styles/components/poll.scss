@@ -1,0 +1,230 @@
+@import "../shared";
+
+section.poll {
+  margin-top: 87px;
+  padding-left: 25px;
+  h2 {
+    //TODO: make global
+    display: inline;
+    position: relative;
+    letter-spacing: 6.56px;
+    font: 800 30px/45px hero-new;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+
+    &:before {
+      //the coloured line that bleeds off of the screen
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      pointer-events: none;
+    }
+
+    &.left:before {
+      left: calc(-100vw - 20px);
+      top: 20px;
+    }
+
+    &.right:before {
+      left: calc(100% + 20px);
+      bottom: 20px;
+    }
+  }
+
+  .content {
+    display: flex;
+    margin-top: 30px;
+
+    img {
+      height: 64px;
+      width: 75px;
+      margin-top: 10px;
+    }
+
+    .poll {
+      margin-left: 35px;
+
+      p {
+        font: 18px hero-new, sans-serif;
+
+        &.select {
+          font-size: 14px;
+        }
+      }
+
+      .question {
+        display: flex;
+        align-items: center;
+        .form {
+          margin-top: 20px;
+          // display: flex;
+          // align-items: center;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          .radio {
+            margin-right: 60px;
+            margin-bottom: 10px;
+            min-width: 270px;
+            label {
+              text-transform: uppercase;
+              // color: #713C48;
+            }
+          }
+
+          .button {
+            height: 40px;
+            line-height: 14px;
+          }
+        }
+      }
+
+      .results {
+        display: flex;
+        align-items: center;
+
+        .pie-chart {
+          width: 122px;
+          height: 122px;
+          margin-top: 20px;
+        }
+
+        .key-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-left: 42px;
+
+          .key {
+            display: flex;
+            align-items: center;
+            height: 35px;
+            margin-right: 40px;
+            &:nth-of-type(n+2) {
+              // margin-top: 14px;
+            }
+
+            span {
+              height: 21px;
+              width: 21px;
+              margin-right: 15px;
+            }
+
+            p {
+              font: 500 14px hero-new, sans-serif;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  section.poll {
+    padding: 35px 30px;
+    margin: 0;
+
+    h2 {
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 4.38px;
+
+      &.right:before {
+        top: 50%;
+      }
+
+      &.left:before {
+        top: 50%;
+        left: calc(-100vw - 10px);
+      }
+    }
+
+    .button {
+      margin: 35px 0 0;
+    }
+
+    .content {
+      margin-top: 10px;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+
+      .poll {
+        margin: 0;
+
+        & > p {
+          font-size: 14px;
+          line-height: 25px;
+          margin: 0 -5px 0 95px;
+
+          &.select {
+            font-size: 10px;
+          }
+        }
+
+        .results {
+          flex-direction: column;
+          // width: 260px;
+          margin-bottom: -17px;
+
+          .key-list {
+            max-width: 100%;
+            margin: 16px 0 0;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: none;
+
+            .key {
+              margin: 0;
+
+              p {
+                font-size: 12px;
+                // color: #A84E2D;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+
+        .question {
+          flex-direction: column;
+          font-size: 12px;
+          .form {
+            display: flex;
+            flex-direction: column;
+            
+            .radio {
+              align-items: center;
+              display: flex;
+              min-width: unset;
+              margin-right: 0;
+              
+              input[type="radio"] + label:before {
+                height: 21px;
+                width: 21px;
+              }
+              label {
+                display: flex;
+                align-items: center;
+
+                sup {
+                  align-self: flex-start;
+                  line-height: normal;
+                  padding-top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "../shared";
+
+.page.prevalence {
+  section {
+    &.feature {
+      .image:before {
+        border-color: map-get($colours, "gold");
+      }
+
+      .text {
+        background: map-get($colours, "red");
+      }
+    }
+
+    &.text-block {
+      color: map-get($colours, "red");
+
+      h2:before {
+        background: map-get($colours, "gold");
+      }
+    }
+
+    &.poll {
+      color: map-get($colours, "red");
+      margin-bottom: 75px;
+      h2:before {
+        background: map-get($colours, "gold");
+      }
+
+      .radio {
+        @include radio(map-get($colours, "dark-teal"));
+      }
+
+      .button {
+        @include button(map-get($colours, "red"));
+      }
+      .key p {
+        color: map-get($colours, "dark-teal");
+      }
+    }
+
+    &.sign-up {
+      background: map-get($colours, "red");
+      .button {
+        color: #fff;
+        &:hover {
+          color: map-get($colours, "red");
+        }
+      }
+    }
+    &.tm-statements {
+      padding-top: 43px;
+      background-color: #000;
+      color: #fff;
+      p {
+        font: 14px/25px hero-new, sans-serif;
+        letter-spacing: -.7px;
+      }
+    }
+  }
+
+  .additional-block {
+    ul {
+      margin: 20px 0;
+      column-count: 2;
+
+      li {
+        font-size: 16px;
+        line-height: 30px;
+        margin: 0 0 20px 24px;
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page.prevalence {
+    .additional-block ul {
+      column-count: 1;
+
+      li {
+        font-size: 13px;
+        line-height: 25px;
+        margin: 0 -3px 0 20px;
+        max-width: 100%;
+      }
+    }
+
+    section.poll {
+      margin-bottom: 20px;
+    }
+
+    section.tm-statements {
+      padding: 35px 30px 0;
+    }
+  }
+}

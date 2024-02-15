@@ -1,0 +1,166 @@
+@import '../shared';
+
+section.sign-up {
+  padding: 43px 0;
+  color: #fff;
+  border-top: 1px solid map-get($colours, 'teal');
+  margin: 51px 0 0;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .inner-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font: 800 30px hero-new, sans-serif;
+    letter-spacing: 6.56px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+  }
+  .input-box {
+    display: flex;
+    justify-content: center;
+    margin: 33px 0 10px;
+    height: 40px;
+
+    input {
+      max-width: 412px;
+      width: 100%;
+      border: 1px solid #fff;
+      border-right: 0;
+      color: rgba(0, 0, 0, 0.42);
+      text-transform: uppercase;
+      outline-color: white;
+      appearance: none;
+      padding: 10px 15px;
+      font: 500 14px/25px hero-new, sans-serif;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .button {
+      @include button(#fff, true);
+      padding: 10px 15px;
+    }
+  }
+  .message {
+    padding: 0 20px;
+    font: 14px/25px hero-new, sans-serif;
+    text-align: center;
+  }
+  p {
+    a {
+      text-decoration: underline;
+    }
+    &.submitted {
+      text-align: center;
+      margin-top: 33px;
+      letter-spacing: normal;
+    }
+    &.submit-error {
+      color: #f00;
+      font-size: 14px;
+      width: 530px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu section.sign-up {
+    margin: 28px 15px 0;
+
+    .container {
+      padding: 0 10px;
+    }
+  }
+  section.sign-up {
+    padding: 28px 0;
+
+    .container {
+      padding: 0 25px;
+
+      .inner-wrap {
+        flex-direction: column-reverse;
+
+        .input-container {
+          margin-bottom: 0;
+        }
+
+        .input-box {
+          flex-direction: column;
+          height: unset;
+          align-items: center;
+
+          p.submit-error.error-on-mobile {
+            margin-top: 16px;
+            line-height: 20px;
+            max-width: 250px;
+          }
+
+          input {
+            border-right: 1px solid #fff;
+            padding: 7px 24px 6px;
+          }
+          .button {
+            text-align: center;
+            margin: 20px auto 0;
+            max-width: 150px;
+
+            &.change-margin-on-error {
+              margin: 16px auto 0;
+            }
+          }
+        }
+
+        .message {
+          margin-top: 11px;
+        }
+
+        .input-box {
+          margin: 24px 17px 11px;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      letter-spacing: 4.38px;
+      line-height: 25px;
+    }
+  }
+  .page.ocular,
+  .page.neural,
+  .page.tear,
+  .page.prevalence {
+    section.sign-up {
+      margin: 0;
+      padding: 0;
+      border: 0;
+
+      .container {
+        padding: 41px 21px 35px 30px;
+
+        .inner-wrap {
+          flex-direction: column;
+
+          .message {
+            margin-top: 20px;
+
+            p {
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

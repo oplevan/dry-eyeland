@@ -1,0 +1,122 @@
+@import "../shared";
+
+.page.ocular {
+  section {
+    &.feature {
+      .image:before {
+        border-color: map-get($colours, "gold");
+      }
+
+      .text {
+        background: map-get($colours, "dark-red");
+      }
+    }
+
+    &.sign-up {
+      background: map-get($colours, "dark-red");
+      .button {
+        color: #fff;
+        &:hover {
+          color: map-get($colours, "dark-red");
+        }
+      }
+    }
+
+    &.text-block {
+      color: map-get($colours, "dark-red");
+
+      h2:before {
+        background: map-get($colours, "gold");
+      }
+    }
+
+    &.poll {
+      color: map-get($colours, "dark-red");
+
+      h2:before {
+        background: map-get($colours, "gold");
+      }
+
+      .radio {
+        @include radio(map-get($colours, "red"));
+      }
+
+      .button {
+        @include button(map-get($colours, "dark-red"));
+      }
+    }
+
+    &.next-up {
+      color: map-get($colours, "dark-red");
+
+      .text {
+        border-color: map-get($colours, "gold");
+
+        .link {
+          @include link(map-get($colours, "dark-red"));
+        }
+      }
+    }
+  }
+
+  .symptom-block {
+    margin-bottom: 30px;
+    column-count: 2;
+    column-fill: balance;
+    display: flex;
+    flex-wrap: wrap;
+  
+    // display: flex;
+    // flex-flow: column wrap;
+    // height: 280px;
+    .symptom {
+      height: 43px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      flex-basis: 50%;
+      // flex: 1 1 200px;
+
+      span {
+        &:first-of-type {
+          text-align: center;
+          width: 35px;
+          margin-right: 28px;
+        }
+
+        &:last-of-type {
+          font: 16px hero-new, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page.ocular {
+    .symptom-block {
+      flex-direction: column;
+      margin: 15px 0;
+
+      .symptom {
+        height: auto;
+        max-height: 30px;
+        margin: 8px 0;
+
+        span:first-of-type {
+          margin-right: 41px;
+          font-size: 0;
+
+          img {
+            max-height: 30px;
+            max-width: 35px;
+          }
+        }
+
+        span:last-of-type {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

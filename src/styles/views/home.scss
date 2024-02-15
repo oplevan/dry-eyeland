@@ -1,0 +1,64 @@
+@import "../shared";
+
+.page.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    font: bold 34px Larosa;
+    letter-spacing: 9.71px;
+    text-align: center;
+  }
+
+  .dry-eyeland-logo {
+    margin: 20px -3vw 36px 0;
+    width: 80vw;
+    pointer-events: none;
+  }
+
+  p {
+    font: 22px/33px hero-new, sans-serif;
+    text-align: center;
+    color: #fff;
+    max-width: 576px;
+    margin-bottom: 58px;
+  }
+
+  .button {
+    @include button(#fff, true);
+  }
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+@media only screen and (max-width: 768px) {
+  .page.home {
+    h1 {
+      font-size: 17px;
+      letter-spacing: 5.3px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 28px;
+      font-weight: 300;
+      margin: 0 27px 45px;
+    }
+
+    .dry-eyeland-logo {
+      width: 85vw;
+      margin: 21px -5vw 32px 0;
+    }
+  }
+}

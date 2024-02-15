@@ -1,0 +1,273 @@
+//scroll area needs higher index and margin to scroll over the first section
+.gap {
+  position: relative;
+  z-index: 2;
+  margin-top: 100vh;
+  background: white;
+}
+
+#scroll-area {
+  //hide the title lines that flow out of viewport
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: calc(100vh - 130px);
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  user-select: none;
+
+  &:before {
+    //horizontal line
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background: #fff;
+  }
+
+  &:after {
+    //add gradient background before sticky nav to make it visible on white background
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: -22px;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 98.35%);
+    //hide it when position fixed
+    opacity: 0;
+  }
+
+  .dot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+
+    p {
+      //floating text
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      white-space: nowrap;
+      color: #fff;
+      font: 14px BonVivantSerif;
+      transition: opacity .3s ease, top .5s ease;
+      transition-delay: .3s;
+      pointer-events: none;
+    }
+
+    .image {
+      //image in center
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      background: #fff;
+      border: 1px solid #fff;
+      transition: all .4s ease;
+      pointer-events: none;
+
+      img {
+        height: 0;
+        width: 0;
+        transition: all .4s ease;
+      }
+
+      &:before, &:after {
+        //surrounding circles
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        height: 0;
+        width: 0;
+        z-index: 0;
+        border-radius: 50%;
+        border-color: #fff;
+        border-style: solid;
+        transition: width .3s ease, height .3s ease;
+      }
+
+      &:before {
+        opacity: 0.6;
+        border-width: 1.75px;
+      }
+
+      &:after {
+        //with delay
+        transition-delay: .1s;
+        opacity: 0.2;
+        border-width: 2.5px;
+      }
+    }
+
+    a {
+      position: relative;
+      min-width: 30px;
+      min-height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // opacity: 0;
+     
+      -webkit-animation:  0s forwards ease-in fade-dot;
+     
+
+      @keyframes fade-dot {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        p {
+          top: -30px;
+          opacity: 1;
+        }
+
+        .image {
+          &:before {
+            height: 280%;
+            width: 280%;
+          }
+
+          &:after {
+            height: 500%;
+            width: 500%;
+          }
+        }
+      }
+
+      &.active {
+        pointer-events: none;
+        animation-delay: .2s;
+        animation-duration: .5s;
+        opacity: 0;
+        .image {
+          height: 90px;
+          width: 90px;
+
+          &:before {
+            height: 120%;
+            width: 120%;
+          }
+
+          &:after {
+            height: 170%;
+            width: 170%;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    //make the nav bar stick to the scroll container on scroll
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    margin-bottom: -90px;
+    transform: translateY(22px);
+
+    &:after {
+      //show gradient background when sticky
+      transition: opacity .3s ease;
+      opacity: 1;
+    }
+
+    a {
+      &.active {
+        p {
+          top: -20px;
+          opacity: 1;
+        }
+
+        .image {
+          height: 50px;
+          width: 50px;
+
+          &:before, &:after {
+            height: 0;
+            width: 0;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    top: auto;
+    bottom: 50px;
+
+    &.sticky {
+      transform: translateY(28px);
+
+      a.active > p {
+        top: -17px;
+      }
+    }
+
+    &:after {
+      top: -28px;
+      height: 100px;
+    }
+
+    .dot {
+      width: 34px;
+      height: 34px;
+      a {
+        .image {
+          height: 5px;
+          width: 5px;
+        }
+        &.active {
+          .image {
+            height: 34px;
+            width: 34px;
+          }
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+      
+      &:first-child p {
+        left: 0;
+        transform: translateX(-6px);
+      }
+
+      &:last-child p {
+        left: auto;
+        right: 0;
+        transform: translateX(6px);
+      }
+    }
+  }
+}

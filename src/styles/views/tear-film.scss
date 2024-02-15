@@ -1,0 +1,61 @@
+@import "../shared";
+
+.page.tear {
+  section {
+    &.feature {
+      .image:before {
+        border-color: map-get($colours, "teal");
+      }
+
+      .text {
+        background: map-get($colours, "blue");
+      }
+    }
+
+    &.sign-up {
+      background: map-get($colours, "blue");
+      .button {
+        color: #fff;
+        &:hover {
+          color: map-get($colours, "blue");
+        }
+      }
+    }
+
+    &.text-block {
+      color: map-get($colours, "blue");
+
+      h2:before {
+        background: map-get($colours, "teal");
+      }
+    }
+
+    &.next-up {
+      color: map-get($colours, "blue");
+
+      .text {
+        border-color: map-get($colours, "teal");
+
+        .link {
+          @include link(map-get($colours, "blue"));
+        }
+      }
+    }
+  }
+
+  .components-block {
+    .icon-text {
+      margin-top: 33px;
+
+      .image {
+        text-align: center;
+        height: 44px;
+        width: 42px;
+      }
+
+      p {
+        margin: 0 0 0 25px;
+      }
+    }
+  }
+}

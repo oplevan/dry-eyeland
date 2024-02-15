@@ -1,0 +1,70 @@
+@import "shared";
+
+//NewHero font
+@import url("https://use.typekit.net/kgh8lde.css");
+//Larosa font
+@include font(Larosa, $file: Larosa);
+@include font(Larosa, $weight: bold, $file: Larosa-Bold);
+//BonVivant font
+@include font(BonVivant, $file: BonVivant-Regular);
+@include font(BonVivantSerif, $file: BonVivantSerif);
+@include font(BonVivantSerif, $weight: bold, $file: BonVivantSerif-Bold);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: hero-new, sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.container {
+  //max content width is 1280px
+  max-width: 1108px;
+  margin: 0 auto;
+  
+}
+
+a {
+  //globally used to remove default styling
+  text-decoration: none;
+  color: unset;
+  transition: all .3s ease;
+}
+sup {
+  font-size: 50%;
+  line-height: 0;
+  white-space: nowrap;
+}
+//background map positioning
+#map-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+//delete below when project is ready for deployment
+.debug {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .page.ocular,
+  .page.neural,
+  .page.tear,
+  .page.prevalence {
+    .main-image {
+      display: none;
+    }
+  }
+}

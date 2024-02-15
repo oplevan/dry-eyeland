@@ -1,0 +1,126 @@
+//a map of all colours used
+$colours: (
+  'teal': #369a9e,
+  'darker-teal': #1a6e89,
+  'dark-teal': #035a5b,
+  'gold': #dd9c77,
+  'yellow': #bcc432,
+  'red': #943f20,
+  'dark-red': #713c48,
+  'blue': #144e74,
+);
+
+//a button mixin
+@mixin button($colour, $isTransparent: false) {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: $colour;
+  background: transparent;
+  border: 1px solid $colour;
+  cursor: pointer;
+  user-select: none;
+  font: 14px hero-new, sans-serif;
+  letter-spacing: 4px;
+  text-decoration: none;
+  padding: 13px 20px;
+  transition: all 0.3s linear;
+
+  @media only screen and (max-width: 768px) {
+    padding: 9px 11px;
+  }
+
+  &:hover {
+    @if $isTransparent {
+      color: #000;
+    } @else {
+      color: #fff;
+    }
+    background: $colour;
+  }
+  &.get-started:hover {
+    color: #1a6e89;
+  }
+  &.disabled {
+    pointer-events: none;
+    // opacity: 0.5;
+  }
+}
+
+//mixin for underlined links
+@mixin link($colour, $caret: true) {
+  display: inline-block;
+  color: $colour;
+  cursor: pointer;
+  font: 14px hero-new, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $colour;
+  transition: all 0.2s linear;
+  user-select: none;
+  font-weight: bold;
+
+  @if $caret {
+    &:after {
+      content: '';
+      margin-left: 10px;
+      border: solid $colour;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(-45deg);
+      transition: margin-left 0.3s linear;
+    }
+  }
+
+  &:hover {
+    letter-spacing: 3.5px;
+  }
+}
+
+//custom radio button mixin
+@mixin radio($colour) {
+  input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+
+    + label {
+      cursor: pointer;
+      user-select: none;
+      color: $colour;
+
+      &:before {
+        content: '';
+        border: 1px solid $colour;
+        display: inline-block;
+        height: 23px;
+        width: 23px;
+        position: relative;
+        margin-right: 18px;
+        vertical-align: text-top;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+    }
+
+    &:checked,
+    &:hover {
+      + label {
+        &:before {
+          background: $colour;
+        }
+      }
+    }
+  }
+}
+
+//font mixin
+@mixin font($name, $weight: normal, $style: normal, $file: $name) {
+  @font-face {
+    font-family: '#{$name}';
+    font-style: $style;
+    font-weight: $weight;
+    src: url('./fonts/#{$file}.otf') format('opentype');
+  }
+}

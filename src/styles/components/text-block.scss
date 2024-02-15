@@ -1,0 +1,205 @@
+@import "../shared";
+
+section.text-block {
+  max-width: 1280px;
+  clear: both;
+  padding-left: 25px;
+  .content {
+    float: none;
+    padding-right: 25px;
+    padding-top: 50px;
+
+    h2 {
+      display: inline;
+      position: relative;
+      letter-spacing: 6.56px;
+      font: 800 30px/45px hero-new;
+      text-transform: uppercase;
+      margin-bottom: 33px;
+
+      &:before {
+        //the coloured line that bleeds off of the screen
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100vw;
+        pointer-events: none;
+      }
+
+      &.left:before {
+        left: calc(-100vw - 20px);
+        top: 20px;
+      }
+
+      &.right:before {
+        left: calc(100% + 20px);
+        bottom: 20px;
+      }
+    }
+
+    p, li {
+      margin: 30px 0;
+      font: 18px/33px hero-new, sans-serif
+    }
+
+    ul {
+      margin-left: 24px;
+    }
+  }
+
+  .main-image, .main-video {
+    position: relative;
+    float: right;
+    // width: 715px;
+    width: 50%;
+    margin: -34px 0 25px 25px;
+  }
+
+  section.did-you-know-block {
+    //global styling for common used block
+    .icon-text {
+      margin-top: 33px;
+
+      .image {
+        height: 58px;
+        width: 58px;
+        
+      }
+
+      p {
+        margin: 0 0 0 13px;
+      }
+    }
+  }
+}
+section.did-you-know-block {
+  img {
+    margin-right: 10px;
+  }
+}
+.icon-text {
+  //icon with text to the right
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  p {
+    flex: 1;
+  }
+}
+// ipad
+.video-container-mob video {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  section.text-block {
+    padding: 35px 30px 18px;
+
+    .content {
+      margin: 0 -3px 0 0;
+      padding: 0;
+
+      ul, li, p {
+        font-size: 14px;
+        line-height: 25px;
+      }
+      
+      p{
+        margin: 20px 0 0;
+      }
+
+      h2 {
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 4.38px;
+
+        &.left:before {
+          top: 12px;
+          left: -39px;
+          width: 30px;
+        }
+
+        &.right:before {
+          bottom: 15px;
+        }
+      }
+
+      .icon-text {
+        align-items: flex-start;
+        margin: 0 0 30px;
+
+        .image {
+          margin-top: 5px;
+        }
+
+        &:first-of-type {
+          margin-top: 30px;
+        }
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+
+      
+      .video-container-mob {
+        margin: 31px -30px 0;
+        font-size: 0;
+        
+        video, img {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.did-you-know-block {
+      .icon-text:first-of-type {
+        margin-top: 15px;
+
+        p {
+          margin: 0;;
+        }
+      }
+    }
+  }
+
+  // text-block styles for Ocular Summit Page
+  .page.ocular {
+    .content {
+      p {
+        margin-top: 39px;
+      }
+    }
+  }
+
+  // text-block styles for Neural Tributaries Page
+  .page.neural {
+    .content {
+      p:first-of-type {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  // text-block styles for Tear Film Shores Page
+  .page.tear {
+    .did-you-know-block {
+      padding-top: 17px;
+    }
+  }
+}
+  
+@media (orientation: landscape) and (max-height: 450px) {
+  section.feature .text {
+    padding: 140px 140px 97px 250px;
+    h2 {
+      font-size: 50px;
+    }
+    p {
+      padding-right: 40px;
+    }
+  }
+}
